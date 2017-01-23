@@ -1,0 +1,5 @@
+c:\users\a.akshabaev\documents\visual studio 2013\Projects\PT2017W2G1\Example2\bin\Debug\Example2.exe.config
+c:\users\a.akshabaev\documents\visual studio 2013\Projects\PT2017W2G1\Example2\bin\Debug\Example2.exe
+c:\users\a.akshabaev\documents\visual studio 2013\Projects\PT2017W2G1\Example2\bin\Debug\Example2.pdb
+c:\users\a.akshabaev\documents\visual studio 2013\Projects\PT2017W2G1\Example2\obj\Debug\Example2.exe
+c:\users\a.akshabaev\documents\visual studio 2013\Projects\PT2017W2G1\Example2\obj\Debug\Example2.pdb
