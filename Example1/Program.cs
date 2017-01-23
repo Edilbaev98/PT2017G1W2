@@ -17,7 +17,7 @@ namespace Example1
             this.x = x;
             this.y = y;
         }
-
+        // a.Print();
         public void Print()
         {
             Console.WriteLine(x + "/" + y);

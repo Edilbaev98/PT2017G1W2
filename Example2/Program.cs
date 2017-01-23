@@ -93,9 +93,82 @@ namespace Example2
 
             }
         }
+
+        static void Ex5()
+        {
+            StreamWriter st = new StreamWriter(@"c:\work\a.txt");
+            st.WriteLine("Hello world");
+            st.Close();
+        }
+
+        static void Ex6()
+        {
+            StreamReader sr = new StreamReader(@"C:\work\input.txt");
+            string s = sr.ReadLine(); // "10 12"
+            string[] arr = s.Split(); // arr[0] = "10", arr[1] = "12"
+            int a = int.Parse(arr[0]); // a = 10
+            int b = int.Parse(arr[1]); // b = 12
+            Console.WriteLine(a + b); // 22
+            Console.ReadKey();
+            sr.Close();
+        }
+
+        static void Ex7()
+        {
+            StreamReader sr = new StreamReader(@"c:\work\input.txt");
+            StreamWriter sw = new StreamWriter(@"c:\work\output.txt");
+            string[] arr = sr.ReadLine().Split();
+            int sum = 0;
+            foreach (string s in arr) {
+                sum += int.Parse(s);
+            }
+            sw.WriteLine(sum);
+            sr.Close();
+            sw.Close();
+        }
+
+        class Point
+        {
+            int x, y;
+            public Point(int x, int y)
+            {
+                this.x = x;
+                this.y = y;
+            }
+
+            public override string ToString()
+            {
+                return x + " " + y;
+            }
+        }
+
+        static void Ex8()
+        {
+            StreamReader sr = new StreamReader(@"c:\work\points.txt");
+            string[] arr = sr.ReadLine().Split(); // arr[0] = "1:2" arr[1] = "5:4"...
+            List<Point> points = new List<Point>();
+
+            foreach (string s in arr)
+            {
+                // s = "1:2" x = 1, y = 2
+                string[] a = s.Split(':'); // a[0] = 1, a[1] = 2
+                Point p = new Point(int.Parse(a[0]), int.Parse(a[1]));
+                points.Add(p);
+            }
+
+            foreach (Point p in points)
+            {
+                Console.WriteLine(p);
+            }
+            sr.Close();
+            Console.ReadKey();
+        }
+        // DriveInfo
+        // File Directory Path
+        // StreamReader, StreamWriter => FileSteram
         static void Main(string[] args)
         {
-            Ex4(@"C:\Windows", 0);
+            Ex8();
         }
     }
 }
